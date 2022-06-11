@@ -15,7 +15,7 @@ from database.sql import add_user, query_msg, full_userbase
 
 WAIT_MSG = """"<b>Processing...⌛</b>"""
 
-REPLY_ERROR = """<code>Use this command as a replay to any telegram message with out any spaces</code>"""
+REPLY_ERROR = """<code>Use This Command As A Reply To Any Telegram Message With Out Any Spaces</code>"""
 
 #=====================================================================================##
 
@@ -57,7 +57,7 @@ async def start_command(client: Client, message: Message):
                 ids = [int(int(argument[1]) / abs(client.db_channel.id))]
             except:
                 return
-        temp_msg = await message.reply("Please wait...⏳")
+        temp_msg = await message.reply("<b>Please wait...⏳</b>")
         try:
             messages = await get_messages(client, ids)
         except:
@@ -91,7 +91,7 @@ async def start_command(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton("About", callback_data = "about"),
-                    InlineKeyboardButton("Close", callback_data = "close")
+                    InlineKeyboardButton("CLOSE", callback_data = "close")
                 ]
             ]
         )
