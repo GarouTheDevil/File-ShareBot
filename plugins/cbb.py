@@ -10,7 +10,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "about":
         await query.message.edit_text(
-            text = f"<b>• Creator : <a href='https://t.me/TheAnimeEncodez'>TAE</a>\nI Will Share Files Which Are Shared By TAE (TheAnimeEncodez)</b>",
+            text = f"<b>• Creator :TAE Official\nI Will Share Files Which Are Shared By TAE Official Adminstrators On Channel</b>",
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
                 [
